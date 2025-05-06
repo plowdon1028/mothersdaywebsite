@@ -1,0 +1,14 @@
+/* Import Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+  background-color: #add8e6; /* Light blue */
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make all headers bold */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
