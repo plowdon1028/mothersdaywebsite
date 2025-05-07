@@ -11,4 +11,24 @@ body {
 /* Make all headers bold */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  text-align: center;
+}
+
+/* Grid container for photos and other stuff */
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Styling each photo or video */
+.media-grid img, 
+.media-grid video {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
