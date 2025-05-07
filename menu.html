@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meal Preferences</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Meal Preferences Form</h1>
+  <form action="mailto:your@email.com" method="post" enctype="text/plain">
+    <!-- Question 1 -->
+    <fieldset>
+      <legend>1. What do you want for breakfast?</legend>
+      <label><input type="radio" name="breakfast" value="Pancakes" onclick="showOptions()"> Pancakes</label>
+      <label><input type="radio" name="breakfast" value="Full English" onclick="showOptions()"> Full English</label>
+    </fieldset>
+
+    <!-- Pancakes -->
+    <fieldset id="pancakeOptions" style="display: none;">
+      <legend>If Pancakes... What toppings?</legend>
+      <label><input type="checkbox" name="pancake_toppings" value="Syrup"> Syrup</label>
+      <label><input type="checkbox" name="pancake_toppings" value="Cool Whip"> Cool Whip</label>
+      <label><input type="checkbox" name="pancake_toppings" value="Fruit"> Fruit</label>
+    </fieldset>
+
+    <!-- Full English -->
+    <fieldset id="englishOptions" style="display: none;">
+      <legend>If Full English... What to include?</legend>
+      <label><input type="checkbox" name="full_english" value="Bacon"> Bacon</label>
+      <label><input type="checkbox" name="full_english" value="Eggs"> Eggs</label>
+      <label><input type="checkbox" name="full_english" value="Beans"> Beans</label>
+      <label><input type="checkbox" name="full_english" value="Fried Bread"> Fried Bread</label>
+      <label><input type="checkbox" name="full_english" value="Sausage"> Sausage</label>
+      <label><input type="checkbox" name="full_english" value="Mushrooms"> Mushrooms</label>
+      <label><input type="checkbox" name="full_english" value="Tomato"> Tomato</label>
+    </fieldset>
+
+    <!-- Question 3 -->
+    <fieldset>
+      <legend>3. What do you want for lunch?</legend>
+      <label><input type="radio" name="lunch" value="Cold Cut Sandwich"> Cold Cut Sandwich</label>
+      <label><input type="radio" name="lunch" value="Anabella's Salad"> Anabella's Salad</label>
+    </fieldset>
+
+    <!-- Question 4 -->
+    <fieldset>
+      <legend>4. What do you want for dinner?</legend>
+      <label><input type="radio" name="dinner" value="Sushi"> Sushi</label>
+      <label><input type="radio" name="dinner" value="Chinese"> Chinese</label>
+      <label><input type="radio" name="dinner" value="Thai"> Thai</label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function showOptions() {
+      const pancake = document.querySelector('input[name="breakfast"][value="Pancakes"]').checked;
+      const fullEnglish = document.querySelector('input[name="breakfast"][value="Full English"]').checked;
+
+      document.getElementById('pancakeOptions').style.display = pancake ? 'block' : 'none';
+      document.getElementById('englishOptions').style.display = fullEnglish ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
