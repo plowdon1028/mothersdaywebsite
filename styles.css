@@ -26,9 +26,69 @@ h1, h2, h3, h4, h5, h6 {
 /* Styling each photo or video */
 .media-grid img, 
 .media-grid video {
-  width: 30%;
+  width: 90%;
   max-width: 300px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Mobile Form Styling ---------- */
+
+form {
+  width: 95%;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  margin-bottom: 16px;
+  border: 2px solid #0078d7;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #005fa3;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+  transform: scale(1.3);
+  vertical-align: middle;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1em;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Optional: Improve tap area spacing */
+label input {
+  margin-bottom: 5px;
 }
